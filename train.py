@@ -44,7 +44,7 @@ def train_val(train_val_data, model, mode, bs, epochs, criterion, optimizer, ear
             src_l_cut, dst_l_cut = train_src_l[batch_idx], train_dst_l[batch_idx]
             ts_l_cut = train_ts_l[batch_idx]
             e_l_cut = train_e_idx_l[batch_idx]
-            label_l_cut = train_label_l[batch_idx]  # currently useless since we are not predicting edge labels
+            label_l_cut = train_label_l[batch_idx] 
             size = len(src_l_cut)
             src_l_fake, dst_l_fake = train_rand_sampler.sample(size)
 
@@ -71,7 +71,7 @@ def train_val(train_val_data, model, mode, bs, epochs, criterion, optimizer, ear
                 auc.append(roc_auc_score(true_label, pred_score))
 
         # validation phase use all information
-        model.update_ngh_finder(full_ngh_finder)   # 验证的时候需要采用 full_ngh_finder
+        model.update_ngh_finder(full_ngh_finder)   
         val_acc, val_ap, val_f1, val_auc = eval_one_epoch('val for {} nodes'.format(mode), model, val_rand_sampler, val_src_l,
                                                           val_dst_l, val_ts_l, val_label_l, val_e_idx_l)
         logger.info('epoch: {}:'.format(epoch))
