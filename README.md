@@ -8,4 +8,4 @@ Note that, one should create a new folder 'processed' for the datasets.
 
 ## Usage
 Train and evaluate the model by executing
-> python main.py -d CollegeMsg --pos_dim 108 --bs 32 --n_degree 64 1 --mode i --bias 1e-5 --pos_enc lp --walk_pool sum --seed 0 
+> python main.py -d CollegeMsg --pos_dim 108 --bs 32 --n_degree 64 1 --mode i --bias 1e-5 --pos_enc lp --seed 0 
