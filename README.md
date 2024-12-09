@@ -1,6 +1,14 @@
 # FuzzyDGL
 The PyTorch implementation of ''[Fuzzy Representation Learning on Dynamic Graphs](https://ieeexplore.ieee.org/document/10286559)''.
 
+## Requirements
+- numpy         1.19.2
+- python        3.6.13
+- pytorch       1.7.1
+- scikit-learn  0.24.2
+- scipy         1.5.4
+- numpy         1.19.2
+
 ## Data
 The datasets are stored at [Download](https://drive.google.com/drive/folders/1FwiDUCK4KSL0E3w3IdR9Iek87dho-hu3). 
 
